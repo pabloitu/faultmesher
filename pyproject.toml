@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "faultmesher"
+version = "0.0.1"
+description = "Surface meshing of faults for boundary-element models"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+    "gmsh",
+    "meshio",
+    "pyvista",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+faultmesher = "faultmesher.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["faultmesher*"]

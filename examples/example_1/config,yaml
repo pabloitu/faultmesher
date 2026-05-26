@@ -1,0 +1,10 @@
+cl: 300
+
+faults:
+  - name: fault
+    trace: [[0, 0], [3000, 500], [6000, 0], [9000, 1000]]
+    top_depth: 0.0
+    bottom_depth: -8000.0
+    dip: 70.0
+    curve_type: spline
+    spline_resample: 200
